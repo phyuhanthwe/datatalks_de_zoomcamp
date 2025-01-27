@@ -3,6 +3,7 @@
 ## Question 1
 ```sh
 docker run -it --entrypoint=bash python:3.12.8
+```
 
 ## Question 3
 ```sql
@@ -14,6 +15,7 @@ select
     count(case when trip_distance > 10 then 1 end) as "Over 10 miles"
 from green_taxi_trips
 where lpep_pickup_datetime >= '2019-10-01' and lpep_pickup_datetime < '2019-11-01';
+```
 
 ## Question 4
 ```sql
@@ -21,6 +23,7 @@ select lpep_pickup_datetime, max(trip_distance) as longest_trip
 from green_taxi_trips
 group by lpep_pickup_datetime
 order by longest_trip desc;
+```
 
 ## Question 5
 ```sql
@@ -31,6 +34,7 @@ on gt."PULocationID" = tz."LocationID"
 where gt."lpep_pickup_datetime"::date = '2019-10-18'
 group by tz."Zone"
 having sum(total_amount) > 13000;
+```
 
 ## Question 6
 ```sql
@@ -46,3 +50,4 @@ and gt."lpep_pickup_datetime" < '2019-11-01'
 group by tz_dropoff."Zone"
 order by largest_tip desc
 limit 1;
+```
