@@ -25,7 +25,7 @@ variable "bq_dataset_name" {
 
 variable "gcp_storage_bucket" {
   description = "GCP Storage Bucket Name"
-  default = "engaged-plasma-448516-r0-de-dw-bucket"
+  default = "engaged-plasma-448516-r0-de-homework-bucket"
 }
 
 variable "gcp_storage_class" {
